@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "O-auth-App",
-    "slug": "O-auth-App",
+    "name": "expo-tabs-routing",
+    "slug": "expo-tabs-routing",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

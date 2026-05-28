@@ -1,5 +1,5 @@
 {
-  "name": "o-auth-app",
+  "name": "expo-tabs-routing",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "dependencies": {
