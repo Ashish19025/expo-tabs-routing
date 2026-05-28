@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native';
-export default function Explore() {
+export default function Labelhidden() {
     return (
         <View style={styles.container}>
-            <Text>Tab Explore</Text>
+            <Text>label Hidden</Text>
         </View>
     );
 }
