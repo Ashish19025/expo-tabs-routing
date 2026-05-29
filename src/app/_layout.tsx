@@ -1,8 +1,10 @@
-import TabLayout from "@/app/app-tabs";
+import TabLayout from "@/app/_app-tabs";
 import { DarkTheme, ThemeProvider } from "expo-router";
 
 export default function RootLayout() {
   return (
-    <TabLayout />
+    <ThemeProvider value={DarkTheme}>
+      <TabLayout />
+    </ThemeProvider>
   );
 }

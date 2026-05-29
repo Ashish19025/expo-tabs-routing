@@ -4,7 +4,8 @@ import { Activity, useCallback, useState } from 'react';
 
 
 export default function Explore() {
-    {/* The `useIsFocused` hook is used to determine whether the current screen is focused or not.
+    {/* 
+    The `useIsFocused` hook is used to determine whether the current screen is focused or not.
     const isFocused = useIsFocused();
     if(!isFocused) {
         return (
@@ -34,11 +35,19 @@ export default function Explore() {
     */}
 
 
+
+
+
     {/* Now the code is the combination of both the above code snippets. 
         The `useIsFocused` hook is used to determine whether the current screen is focused or not, 
-        and the `useFocusEffect` hook is used to perform side effects when the screen is focused. */}
+        and the `useFocusEffect` hook is used to perform side effects when the screen is focused. 
+    */}
 
+    // The `useState` hook is used to create a state variable `price` and a function `setPrice` to update it.
+    // any is used as the type of the `price` state variable because the API response can be of any type, and we want to avoid TypeScript errors.
     const [price, setPrice] = useState<any[]>([]);
+
+    // The `useState` hook is also used to create a state variable `loading` and a function `setLoading` to update it, which is used to show a loading indicator when the API call is in progress.
     const [loading, setLoading] = useState(false);
 
     const isFocused = useIsFocused();
@@ -90,6 +99,8 @@ export default function Explore() {
 
     return (
         <View >
+            {/* The `loading` state variable is used to show the loading indicator when the API call is in progress, 
+            and to show the price of Bitcoin when the API call is completed. */}
             {loading ? (
                 <ActivityIndicator />
             ) : (
@@ -97,10 +108,14 @@ export default function Explore() {
                     <View key={stock.code}>
                         <Text>{stock.code}: {stock.rate}</Text>
                     </View>
-                 )
-            )
-            )}
-            
+                    )
+                )
+            )}  
+
+            {/* The `isFocused` variable is used to conditionally render the content of the screen only when it is focused. */}
+            {isFocused && <View>
+                <Text>Tab Focused ha </Text>
+            </View>}          
         </View>
     );
 }

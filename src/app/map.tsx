@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-screens/experimental';
-export default function map() {
+export default function Map() {
     return (
         <SafeAreaView edges={{bottom: true}} style={{flex: 1}}>
             <View style={styles.container}>
