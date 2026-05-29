@@ -30,7 +30,7 @@ export default function TabLayout() {
         <NativeTabs.Trigger name="settings">
           {/* You can also use the `src` prop to specify a custom icon.*/}
           <NativeTabs.Trigger.Icon
-            src={require("../../assets/images/splash-icon.png")}
+            src={require("../../../assets/images/splash-icon.png")}
             // The `renderingMode` prop can be used to control how the icon is rendered.
             // The default value is "template", which means the icon will be rendered as a template image and will inherit the tint color.
             renderingMode="original"
@@ -43,7 +43,7 @@ export default function TabLayout() {
           {/* The `Badge` component can be used to display a badge on the tab icon. */}
           <NativeTabs.Trigger.Badge>10+</NativeTabs.Trigger.Badge>
           {/* The `Label` component is used to specify the label of the tab. */}
-          <NativeTabs.Trigger.Label hidden={true}>Explore</NativeTabs.Trigger.Label>
+          <NativeTabs.Trigger.Label hidden={false}>Explore</NativeTabs.Trigger.Label>
         </NativeTabs.Trigger>
 
 
@@ -63,10 +63,11 @@ export default function TabLayout() {
         {/* The `disableAutomaticContentInsets` prop can be used to disable the default 
       behavior of adding insets to the content when the tab is selected. 
       This can be useful if you want to have more control over the layout of your content. */}
-        <NativeTabs.Trigger name="map" disableAutomaticContentInsets={true}>
+        <NativeTabs.Trigger name="map" disableAutomaticContentInsets={false}>
           <NativeTabs.Trigger.Label>Map</NativeTabs.Trigger.Label>
         </NativeTabs.Trigger>
       </NativeTabs>
     </TabBarContext>
+    
   );
 }
